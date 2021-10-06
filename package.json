@@ -13,5 +13,10 @@
   },
   "devDependencies": {
     "express": "^4.17.1"
+  },
+  "dependencies": {
+    "caterpillar": "^6.8.0",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0"
   }
 }
