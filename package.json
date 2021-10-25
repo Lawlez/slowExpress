@@ -8,8 +8,8 @@
     "start": "node ./slowExpress.js"
   },
   "engines": {
-    "node": ">=12.18.3",
-    "yarn": "^1.22.4"
+    "node": ">=14.16.1",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "express": "^4.17.1"

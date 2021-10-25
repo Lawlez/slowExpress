@@ -37,7 +37,7 @@ try {
       "IP addr: ",
       ip
     );
-    //logger.log("FullInfo: ", req, next, req.headers.toString());
+    logger.log("FullInfo: ", new Date().getTime(),req.rawHeaders, process.resourceUsage() );
     sendAndSleep(res, 1);
   });
 
@@ -60,8 +60,9 @@ const sendAndSleep = (response, counter) => {
       counter++;
       setTimeout(() => {
         sendAndSleep(response, counter);
-      }, 3000);
+      }, 3100);
     }
+    //it will take 3 months to send a full response
 
 };
 
