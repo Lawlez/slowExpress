@@ -60,7 +60,7 @@ const noOp = () => {
   });
   // catches unhandled promise rejections
   process.on("unhandledRejection", (err) => {
-    //logger.error(err);
+    logger.error(err);
     exitHandler({ exit: true, logLevel: 0 }, 1, "UnhandledPromiseRejection");
   });
 };
