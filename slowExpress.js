@@ -1,5 +1,5 @@
 const express = require('express')
-const { RateLimiterMemory } = require('rate-limiter-flexible')
+//const { RateLimiterMemory } = require('rate-limiter-flexible')
 const { initLogging, logger, noOp } = require('./exitHandler')
 const session = require('express-session')
 const helmet = require('helmet')
@@ -7,18 +7,18 @@ const helmet = require('helmet')
 const app = express()
 
 //rate limiting per IP
-const opts = {
+/*const opts = {
   points: 6, // 6 actions
   duration: 1, // Per second
 }
-const rateLimiter = new RateLimiterMemory(opts)
+const rateLimiter = new RateLimiterMemory(opts)*/
 
 //starts the Logging service & exithandler
 initLogging()
 noOp()
 
 const port = process.env.PORT || 8080
-const remoteAddress = '192.1.1.1'
+//const remoteAddress = '192.1.1.1'
 
 try {
   app.use(helmet())
